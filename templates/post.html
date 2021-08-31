@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center title">
+  {{ page.title }}
+</h1>
+<h4 class="text-center title">
+  {{ page.extra.author }}
+</h4>
+<br><br>
+<img src="{{ page.extra.cover }}" class="img-fluid rounded" alt="...">
+<br><br>
+
+{% for category in page.extra.categories %}
+  <a class="btn btn-secondary btn-sm" href="/blog/categories/{{ category }}">{{ category }}</a>
+{% endfor %}
+<br><br>
+
+{{ page.content | safe }}
+{% endblock content %}
