@@ -6,6 +6,7 @@ date = 2019-11-27
 author = "Thomas Wehmöller"
 cover = "/img/first.jpg"
 categories = []
+excerpt = "Hey there, i finally got the time to make what i wanted for a long time..." 
 +++
 
 Hey there,

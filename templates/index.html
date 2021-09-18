@@ -9,13 +9,15 @@
 <br>
 <div class="row">
     <div class="col-md-3 mb-4">
-
+    {% set section = get_section(path="blog/_index.md") %}
+    {% set page = section.pages | first %}
+    {% include "post-preview.html" %}
     </div>
-</div>
 <p class="offset-md-1 col-md-8">Welcome to my Website, i will post here frequently <mark>tutorials</mark> for informatics
         since i am studying <mark>Computer Science</mark> at the FH in Aachen.
         At the moment i am in my sixth semester and searching for an internship.
         If you have a question about a topic on my website feel free to <mark>contact</mark> me,
         i will most likely answer on <mark>steam</mark> or <mark>youtube</mark>.</p>
+</div>
 {% endblock content %}
 

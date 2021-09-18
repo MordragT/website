@@ -6,6 +6,7 @@ date = 2021-04-28
 author = "Thomas Wehmöller"
 categories = []
 cover = "/img/coding.jpg"
+excerpt = "This is an overview over man projects i do/did so far. There are still many projects missing..."
 +++
 
 # My Procjects - Overview
@@ -31,6 +32,7 @@ In computergraphics i created a simple `QT Application` in `cpp`. I used `OpenGL
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XS2q9vPfBjo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
+
 ---
 
 #### Compiler Construction (5th semester)
@@ -56,17 +58,21 @@ This was the follow up course to `DBWT 1`. I learned more about `Laravel` and us
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PEqSo8c88HM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
+
 ---
 
 #### Managy - Softwareengineering (3rd semester)
 
 This project was used to learn more about working in a team and developing software for a customer. In my team we developed an android app to manage the everyday life of an student writing a thesis. [Link](https://github.com/MordragT/managy) to the repository, with more presentations.
 <img src="/assets/images/startseite.png" alt="Startseitebild" height="720"/>
+
 ---
 
 ## Other Projects
 
 Here are other projects i did in my freetime.
+
+---
 
 #### Zen Loader
 

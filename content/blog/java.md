@@ -6,6 +6,7 @@ date = 2020-01-25
 author = "Thomas Wehmöller"
 categories = ["java"]
 cover = "/img/java.jpg"
+excerpt = "Java is a object oriented programming language that is widely adopted in the industry..."
 +++
 
 ### What is Java ?
