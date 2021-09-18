@@ -2,9 +2,11 @@
 title = "My Projects - Overview"
 date = 2021-04-28
 
+[taxonomies]
+categories = []
+
 [extra]
 author = "Thomas Wehmöller"
-categories = []
 cover = "/img/coding.jpg"
 excerpt = "This is an overview over man projects i do/did so far. There are still many projects missing..."
 +++

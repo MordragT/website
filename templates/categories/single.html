@@ -1,0 +1,15 @@
+{% extends "blog.html" %}
+
+
+{% block title %}
+{{ term.name }}
+{% endblock %}
+
+{% block overview %}
+{% set section = get_section(path="blog/_index.md") %}
+  {% for page in section.pages %}
+    {% if page.taxonomies.categories is containing(term.name) %}
+      {% include "post-preview.html" %}
+    {% endif %}
+  {% endfor %}
+{% endblock %}

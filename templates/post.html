@@ -11,8 +11,9 @@
 <img src="{{ page.extra.cover }}" class="img-fluid rounded" alt="...">
 <br><br>
 
-{% for category in page.extra.categories %}
-  <a class="btn btn-secondary btn-sm" href="/blog/categories/{{ category }}">{{ category }}</a>
+{% set categories = get_taxonomy(kind="categories") %}
+{% for category in categories.items %}
+  <a class="btn btn-secondary btn-sm" href="/categories/{{ category.name }}">{{ category.name }}</a>
 {% endfor %}
 <br><br>
 

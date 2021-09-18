@@ -2,9 +2,11 @@
 title = "Java - Introduction"
 date = 2020-01-25
 
+[taxonomies]
+categories = [ "java" ]
+
 [extra]
 author = "Thomas Wehmöller"
-categories = ["java"]
 cover = "/img/java.jpg"
 excerpt = "Java is a object oriented programming language that is widely adopted in the industry..."
 +++

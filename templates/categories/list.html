@@ -1,0 +1,13 @@
+{% extends "blog.html" %}
+
+
+{% block title %}
+Categories
+{% endblock %}
+
+{% block overview %}
+{% set section = get_section(path="blog/_index.md") %}
+  {% for page in section.pages %}
+    {% include "post-preview.html" %}
+  {% endfor %}
+{% endblock %}
