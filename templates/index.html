@@ -1,23 +1,19 @@
 {% extends "base.html" %}
+{% import "macros.html" as macros %}
 
 {% block content %}
-<h1 class="text-center">Hello, i'm Thomas</h1>
+<h1 class="title is-1 has-text-centered">Hello, i'm Thomas</h1>
 <br><br>
-<div class="row col-md-4">
-    <h3>Latest Article</h3>
-</div>
-<br>
-<div class="row">
-    <div class="col-md-3 mb-4">
-    {% set section = get_section(path="blog/_index.md") %}
-    {% set page = section.pages | first %}
-    {% include "post-preview.html" %}
+
+<h2 class="title is-2">Latest Article</h2>
+<div class="columns">
+    <div class="column is-one-quarter">
+        {% set blog = get_section(path="blog/_index.md") %}
+        {% set latest = blog.pages | first %}
+        {{ macros::post_preview(page=latest) }}
     </div>
-<p class="offset-md-1 col-md-8">Welcome to my Website, i will post here frequently <mark>tutorials</mark> for informatics
-        since i am studying <mark>Computer Science</mark> at the FH in Aachen.
-        At the moment i am in my sixth semester and searching for an internship.
-        If you have a question about a topic on my website feel free to <mark>contact</mark> me,
-        i will most likely answer on <mark>steam</mark> or <mark>youtube</mark>.</p>
+    <div class="column content">
+        {{ section.content | safe }}
+    </div>
 </div>
 {% endblock content %}
-

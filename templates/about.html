@@ -1,28 +1,171 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="text-center">About me</h1>
+<h1 class="title is-1 has-text-centered">About me</h1>
 <br><br>
-<img src="/img/me.jpg" alt="..." class="rounded-circle row mx-auto" width=384 height=384>
-<br><br>
-<div class="text-center">
-    <p>Hello and welcome to my Website</p>
-    <p>My Name is Thomas and i am currently studying Computer Science.</p>
-    <br><br>
-    <h4>Background</h4>
-    <p>German</p>
-    <h4>Living in</h4>
-    <p>Aachen, Germany</p>
-    <h4>Age</h4>
-    <p>21</p>
-    <h4>Interests</h4>
-    <p>Coding</p>
-    <p>Working out</p>
-    <p>Gaming</p>
-    <p>Cooking</p>
-    <h4>Favourite Tech</h4>
-    <p>Rust</p>
-    <p>Laravel</p>
-    <p>Linux</p>
+
+<div class="columns">
+    <div class="column is-one-quarter">
+        <figure class="image">
+            <img src="/img/me.jpg" alt="..." class="is-rounded">
+        </figure>
+    </div>
+    <div class="column content">
+        <p>
+            Hello and welcome to my website!
+            My name is Thomas, and I'm currently a master's student studying Computer Science at FH Aachen.
+            When I'm not coding, you can find me exploring the latest technology trends, whipping up something delicious
+            in the kitchen, or enjoying a good social game or fitness session.
+        </p>
+    </div>
 </div>
+<br><br>
+
+<h2 class="title is-2 has-text-primary">Experience</h2>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">Co-Founder and Co-Chairman</h3>
+            <h4 class="subtitle is-4">Bayernallee 7 e.V.</h4>
+        </div>
+        <div class="column is-one-third has-text-right">
+            <h5 class="title is-5">Aachen</h5>
+            <h6 class="subtitle is-6">Apr 2023 - Nov 2023</h6>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Helping to shape the founding of the association and the development of the articles of association,
+                rules of procedure and financial regulations, among other things</li>
+            <li>Representation of residents' interests towards the property management</li>
+            <li>Moderation of meetings (general meeting, senate, etc.)</li>
+            <li>Organization of events and activities for the residents</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">Network Administrator</h3>
+            <h4 class="subtitle is-4">Bayernallee 7 Dormitory</h4>
+        </div>
+        <div class="column is-one-third has-text-right">
+            <h5 class="title is-5">Aachen</h5>
+            <h6 class="subtitle is-6">Nov 2020 - Nov 2023</h6>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Provision and administration of virtual machines as well as configuration
+                and maintenance of digital services (website, Mail, etc.) through the use of Nix and Proxmox</li>
+            <li>Connecting residents to the intranet/internet</li>
+            <li>Development of various web applications with PHP, Tera, Markdown, CSS, and Javascript</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">Intern</h3>
+            <h4 class="subtitle is-4">Utimaco</h4>
+        </div>
+        <div class="column is-one-third has-text-right">
+            <h5 class="title is-5">Aachen</h5>
+            <h6 class="subtitle is-6">15. Jun 2021 - 12. Nov 2021</h6>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Conceptual design and development of a prototype with REST API functionality based on the Utimaco
+                product CryptoServer LAN</li>
+            <li>Developing a REST API using Spring MVC, Java, Vue and Javascript</li>
+            <li>Creating a web interface for REST API prototype demonstration</li>
+            <li>Execution and development of tests</li>
+            <li>Creating documentation for REST API and installation</li>
+        </ul>
+    </div>
+</section>
+
+<h2 class="title is-2 has-text-primary">Skills</h2>
+
+<section class="section">
+    <div class="fixed-grid">
+        <div class="grid">
+            <strong class="cell">Spoken Languages</strong>
+            <div class="cell">German (mother tongue), English (fluent)</div>
+            <strong class="cell">Paradigms</strong>
+            <div class="cell">Proficient in functional, imperative and object‑oriented programming</div>
+            <strong class="cell">Advanced</strong>
+            <div class="cell">Rust, Nix, Nixos</div>
+            <strong class="cell">Intermediate</strong>
+            <div class="cell">Kotlin, Java, HTML5, JS, TS, Tera, Python, Typst, Unix, Git</div>
+            <strong class="cell">Basic</strong>
+            <div class="cell">PHP, CSS, SASS, C++, Latex, Docker, Laravel, Spring, Vue, React, REST API, (No‑)SQL,
+                Kanban, Scrum</div>
+            <strong class="cell">Other</strong>
+            <div class="cell">Driving License</div>
+        </div>
+    </div>
+</section>
+
+
+<h2 class="title is-2 has-text-primary">Education</h2>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">M. Eng. Information Systems Engineering</h3>
+            <h4 class="subtitle is-4">FH Aachen</h4>
+        </div>
+        <div class="column is-one-quarter has-text-right">
+            <h5 class="title is-5">Aachen</h5>
+            <h6 class="subtitle is-6">Sep 2022 - Today</h6>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">B. Sc. Informatics</h3>
+            <h4 class="subtitle is-4">FH Aachen</h4>
+        </div>
+        <div class="column is-one-quarter has-text-right">
+            <h5 class="title is-5">Aachen</h5>
+            <h6 class="subtitle is-6">Sep 2018 - Aug 2022</h6>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>
+                Bachelor thesis topic: Reproducible and fault‑tolerant package management for Linux written in Rust
+            </li>
+            <li>Bachelor thesis grade: 1.0</li>
+            <li>Focus: Software engineering</li>
+            <li>Final grade: 1.8</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">General Qualification for University Entrance</h3>
+            <h4 class="subtitle is-4">St. Antonius Gymnasium</h4>
+        </div>
+        <div class="column is-one-quarter has-text-right">
+            <h5 class="title is-5">Lüdinghausen</h5>
+            <h6 class="subtitle is-6">Aug 2010 - Aug 2018</h6>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Final grade: 2.8</li>
+        </ul>
+    </div>
+</section>
+
 {% endblock %}

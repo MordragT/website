@@ -1,30 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="text-center">Contact</h1>
+<h1 class="title is-1 has-text-centered">Contact</h1>
 <br><br>
-<div class="row">
-    <form class="col-6 mx-auto" id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/scrat_games@gmx.de"
-        method="post">
-        <fieldset id="fs-frm-inputs">
-            <div class="form-group">
-                <label for="full-name">Full Name</label>
-                <input class="form-control" type="text" name="name" id="full-name" placeholder="First and Last"
-                    required="">
-            </div>
-            <div class="form-group">
-                <label for="email-address">Email Address</label>
-                <input class="form-control" type="email" name="_replyto" id="email-address"
-                    placeholder="email@domain.tld" required="">
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" rows="5" name="message" id="message"
-                    placeholder="Dont hesitate to write a long message." required=""></textarea>
-            </div>
-            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-        </fieldset>
-        <input class="btn btn-secondary" type="submit" value="Submit">
-    </form>
-</div>
+
+<form accept-charset="utf-8" action="https://formsubmit.co/el/bifena" method="post">
+    <div class="field">
+        <label for="full-name" class="label">Full Name</label>
+        <div class="control">
+            <input type="text" class="input" name="name" id="full-name" placeholder="First and Last" required>
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="email-address" class="label">Email Address</label>
+        <div class="control">
+            <input type="email" class="input" name="email" id="email-address" placeholder="email@domain.tld" required>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+            <textarea class="textarea" name="message" placeholder="Dont hesitate to write a long message."></textarea>
+        </div>
+    </div>
+
+    <div class="field">
+        <div class="control">
+            <input class="button is-primary" type="submit"></input>
+        </div>
+    </div>
+</form>
 {% endblock %}

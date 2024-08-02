@@ -2,19 +2,17 @@
 base_url = "https://mordragt.github.io"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = false
+compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
-taxonomies = [
-  { name = "categories" },
-]
+taxonomies = [{ name = "categories" }]
 
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
+highlight_code = true
 
 [extra]
 # Put all your custom variables here

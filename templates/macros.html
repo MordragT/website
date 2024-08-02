@@ -1,0 +1,18 @@
+{% macro post_preview(page) %}
+<div class="card">
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <img src="{{ page.extra.cover }}" alt="...">
+        </figure>
+    </div>
+
+    <div class="card-content">
+        <h5 class="title is-5">{{ page.title }}</h5>
+        <h6 class="subtitle is-6">{{ page.date | date(format="%B %d, %Y", timezone="Europe/Berlin") }}</h6>
+        <div class="content">
+            {{ page.extra.excerpt }}
+        </div>
+        <a href="{{ page.permalink | safe }}" class="button is-primary">Read more</a>
+    </div>
+</div>
+{% endmacro post_preview %}

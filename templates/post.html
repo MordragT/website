@@ -1,21 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="text-center title">
+<h1 class="title is-1 has-text-centered">
   {{ page.title }}
 </h1>
-<h4 class="text-center title">
+<h2 class="subtitle is-2 has-text-centered">
   {{ page.extra.author }}
-</h4>
-<br><br>
-<img src="{{ page.extra.cover }}" class="img-fluid rounded" alt="...">
+</h2>
 <br><br>
 
-{% set categories = get_taxonomy(kind="categories") %}
-{% for category in categories.items %}
-  <a class="btn btn-secondary btn-sm" href="/categories/{{ category.name }}">{{ category.name }}</a>
+<div class="card">
+  <div class="card-image">
+    <figure class="image">
+      <img src="{{ page.extra.cover }}" alt="...">
+    </figure>
+  </div>
+</div>
+
+
+<br><br>
+
+{% for category in page.taxonomies.categories %}
+<a class="button is-primary is-small" href="/categories/{{ category }}">{{ category }}</a>
 {% endfor %}
 <br><br>
 
-{{ page.content | safe }}
+<div class="content">
+  {{ page.content | safe }}
+</div>
 {% endblock content %}

@@ -1,5 +1,5 @@
 {% extends "blog.html" %}
-
+{% import "macros.html" as macros %}
 
 {% block title %}
 Categories
@@ -7,7 +7,11 @@ Categories
 
 {% block overview %}
 {% set section = get_section(path="blog/_index.md") %}
+<div class="columns">
   {% for page in section.pages %}
-    {% include "post-preview.html" %}
+  <div class="column is-one-third">
+    {{ macros::post_preview(page=page) }}
+  </div>
   {% endfor %}
+</div>
 {% endblock %}

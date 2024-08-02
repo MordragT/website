@@ -1,5 +1,5 @@
 {% extends "blog.html" %}
-
+{% import "macros.html" as macros %}
 
 {% block title %}
 {{ term.name }}
@@ -7,9 +7,13 @@
 
 {% block overview %}
 {% set section = get_section(path="blog/_index.md") %}
+<div class="columns">
   {% for page in section.pages %}
-    {% if page.taxonomies.categories is containing(term.name) %}
-      {% include "post-preview.html" %}
-    {% endif %}
+  {% if page.taxonomies.categories is containing(term.name) %}
+  <div class="column is-one-third">
+    {{ macros::post_preview(page=page) }}
+  </div>
+  {% endif %}
   {% endfor %}
+</div>
 {% endblock %}
