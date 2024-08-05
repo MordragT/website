@@ -2,18 +2,172 @@
 {% import "macros.html" as macros %}
 
 {% block content %}
-<h1 class="title is-1 has-text-centered">Hello, i'm Thomas</h1>
+<h1 class="title is-1 has-text-centered">Thomas Wehmöller</h1>
+<h2 class="subtitle is-2 has-text-centered">I create things.</h2>
 <br><br>
 
-<h2 class="title is-2">Latest Article</h2>
-<div class="columns">
-    <div class="column is-one-quarter">
-        {% set blog = get_section(path="blog/_index.md") %}
-        {% set latest = blog.pages | first %}
-        {{ macros::post_preview(page=latest) }}
-    </div>
-    <div class="column content">
+<section class="section">
+    <div class="content">
         {{ section.content | safe }}
     </div>
-</div>
+</section>
+
+<h2 class="title is-2 has-text-primary">Latest Article</h2>
+
+{% set blog = get_section(path="blog/_index.md") %}
+{% set latest = blog.pages | first %}
+<section class="section">
+    <article class="media">
+        <div class="media-left" style="width: 192px; height: 144px">
+            <figure class="image is-4by3">
+                <img src="{{ latest.extra.cover }}" alt="..." width="512" height="384" />
+
+            </figure>
+        </div>
+        <div class="media-content">
+            <h5 class="title is-5">{{ latest.title }}</h5>
+            <h6 class="subtitle is-6">{{ latest.date | date(format="%B %d, %Y", timezone="Europe/Berlin") }}</h6>
+            <div class="content">
+                {{ latest.extra.excerpt }}
+            </div>
+            <a href="{{ latest.permalink | safe }}" class="button is-primary">Read more</a>
+        </div>
+    </article>
+</section>
+
+
+<h2 class="title is-2 has-text-primary">Projects</h2>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">Grax</h3>
+            <h4 class="subtitle is-4">Graph Library</h4>
+        </div>
+        <div class="column is-one-third has-text-right">
+            <span class="tag is-dark">Rust</span>
+            <span class="tag is-success">MIT</span>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Minimum Cost Flow</li>
+            <li>Maximum Flow</li>
+            <li>Traveling Salesman Problem</li>
+            <li>Shortest Path</li>
+            <li>Minimum Spanning Tree</li>
+        </ul>
+        <a href="https://github.com/MordragT/grax" class="button is-dark" target="_blank">
+            <span class="icon">
+                <i class="fa-brands fa-github"></i>
+            </span>
+            <span>GitHub</span>
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">NixOS</h3>
+            <h4 class="subtitle is-4">My NixOS configuration</h4>
+        </div>
+        <div class="column is-one-third has-text-right">
+            <span class="tag is-info">Nix</span>
+            <span class="tag is-success">MIT</span>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Impermanence</li>
+            <li>Intel One API</li>
+            <li>Various services</li>
+        </ul>
+        <a href="https://github.com/MordragT/nixos" class="button is-dark" target="_blank">
+            <span class="icon">
+                <i class="fa-brands fa-github"></i>
+            </span>
+            <span>GitHub</span>
+        </a>
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">Nix-Templates</h3>
+            <h4 class="subtitle is-4">My Nix Templates</h4>
+        </div>
+        <div class="column is-one-third has-text-right">
+            <span class="tag is-info">Nix</span>
+            <span class="tag is-success">MIT</span>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Python (micromamba, poetry, venv)</li>
+            <li>Rust (stable, nightly)</li>
+            <li>Android</li>
+            <li>Many more</li>
+        </ul>
+        <a href="https://github.com/MordragT/nix-templates" class="button is-dark" target="_blank">
+            <span class="icon">
+                <i class="fa-brands fa-github"></i>
+            </span>
+            <span>GitHub</span>
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">Bib Kit</h3>
+            <h4 class="subtitle is-4">Hayagriva Extension for Firefox</h4>
+        </div>
+        <div class="column is-one-third has-text-right">
+            <span class="tag is-dark">Rust</span>
+            <span class="tag is-warning">Firefox</span>
+            <span class="tag is-success">MIT</span>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Provides an firefox extension to create citations in the hayagriva format used by typst.</li>
+        </ul>
+        <a href="https://github.com/MordragT/bib_kit" class="button is-dark" target="_blank">
+            <span class="icon">
+                <i class="fa-brands fa-github"></i>
+            </span>
+            <span>GitHub</span>
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="columns">
+        <div class="column">
+            <h3 class="title is-3">TypeDown</h3>
+            <h4 class="subtitle is-4"> Simple Markup language, easily embeddable and extendable. </h4>
+        </div>
+        <div class="column is-one-third has-text-right">
+            <span class="tag is-dark">Rust</span>
+            <span class="tag is-success">MIT</span>
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li>Inbuilt scripting</li>
+            <li>VScode Extension (Language Server)</li>
+            <li>Plugin Support</li>
+        </ul>
+        <a href="https://github.com/MordragT/type-down" class="button is-dark" target="_blank">
+            <span class="icon">
+                <i class="fa-brands fa-github"></i>
+            </span>
+            <span>GitHub</span>
+        </a>
+    </div>
+</section>
 {% endblock content %}

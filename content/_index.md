@@ -2,8 +2,7 @@
 template = "index.html"
 +++
 
-Welcome to my Website, i will post here frequently **tutorials** for informatics
-since i am studying **Computer Science** at the FH in Aachen.
-At the moment i am in my sixth semester and searching for an internship.
-If you have a question about a topic on my website feel free to **contact** me,
-i will most likely answer on **steam** or **youtube**.
+Hello and welcome to my website!
+My name is Thomas, and I'm currently a master's student studying Computer Science at FH Aachen.
+When I'm not coding, you can find me exploring the latest technology trends, whipping up something delicious
+in the kitchen, or enjoying a good social game or fitness session.
