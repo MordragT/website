@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 
 <head>
     <meta charset="utf-8">
@@ -40,6 +40,16 @@
                         <a class="navbar-item" href="https://steamcommunity.com/id/mordragt" target="_blank">
                             <i class="fa-brands fa-steam"></i>
                         </a>
+                        <div class="navbar-item">
+                            <div class="tabs is-toggle">
+                                <ul>
+                                    <li id="light-toggle"><a><span class="fa-solid fa-sun" /></a></li>
+                                    <li id="dark-toggle"><a><span class="fa-solid fa-moon" /></a></li>
+                                    <li id="system-toggle"><a><span class="fa-solid fa-desktop" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -50,6 +60,41 @@
         <div class="content has-text-centered">Copyright © Thomas Wehmöller 2024</div>
     </footer>
     <script>
+        const html = document.querySelector('html');
+
+        const light = document.getElementById('light-toggle');
+        const dark = document.getElementById('dark-toggle');
+        const system = document.getElementById('system-toggle');
+
+        const currentTheme = localStorage.getItem("theme")
+        switch (currentTheme) {
+            case "theme-light":
+                light.className = "is-active";
+                break;
+            case "theme-dark":
+                dark.className = "is-active";
+                break
+            default:
+                system.className = "is-active";
+                break;
+        }
+        html.className = currentTheme === null ? "" : currentTheme;
+
+        const toggle = (event, theme) => {
+            light.className = "";
+            dark.className = "";
+            system.className = "";
+
+            localStorage.setItem("theme", theme)
+            html.className = theme;
+
+            event.currentTarget.className = "is-active";
+        };
+
+        light.addEventListener("click", event => toggle(event, "theme-light"));
+        dark.addEventListener("click", event => toggle(event, "theme-dark"));
+        system.addEventListener("click", event => toggle(event, ""));
+
         document.addEventListener('DOMContentLoaded', () => {
             const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
